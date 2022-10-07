@@ -1,7 +1,17 @@
 import React from "react";
+import getBackground from "./ts/background";
 
 function App() {
-  return <div className="App"></div>;
+  const backgroundImageFileName = getBackground();
+  return (
+    <div className="container mx-auto">
+      <img
+        src={`/images/${backgroundImageFileName}`}
+        alt="backgroundImage"
+        className="bg-scroll bg-cover"
+      ></img>
+    </div>
+  );
 }
 
 export default App;
